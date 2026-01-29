@@ -18,7 +18,7 @@ public class Swipe : MonoBehaviour
     private Vector2 startPosition;
     private void Update()
     {
-        if (isActive) return;
+        if (!isActive) return;
 
         if (Input.GetMouseButtonDown(0))
         {
