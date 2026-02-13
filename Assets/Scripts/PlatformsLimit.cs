@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class PlatformsLimit : MonoBehaviour
 {
     [SerializeField]
-    private string platformsTag = "Grounf";
+    private string platformsTag = "Ground";
     [SerializeField]
     private UnityEvent onPlatformDetected;
     private void OnTriggerEnter(Collider other)
