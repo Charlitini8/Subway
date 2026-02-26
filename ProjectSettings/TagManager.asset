@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - FxTemporaire
   - Coin
+  - Undefined
+  - JumpPowerUp
   layers:
   - Default
   - TransparentFX
