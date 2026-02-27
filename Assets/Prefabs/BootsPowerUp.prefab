@@ -370,6 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380993511694071771}
   - component: {fileID: 7475531551827405254}
+  - component: {fileID: 5208802335741310094}
   m_Layer: 0
   m_Name: BootsPowerUp
   m_TagString: JumpPowerUp
@@ -386,7 +387,7 @@ Transform:
   m_GameObject: {fileID: 5404570566309138511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76909, y: -115.109, z: 0.7783}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -415,6 +416,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.37, y: 1.22, z: 1.48}
   m_Center: {x: -0.78, y: -0.45, z: 1.42}
+--- !u!114 &5208802335741310094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404570566309138511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f773caf4ac01e4aa43871a81b21c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotate
+  rotationSpeed: {x: 0, y: 100, z: 0}
 --- !u!1 &5692454017261476463
 GameObject:
   m_ObjectHideFlags: 0

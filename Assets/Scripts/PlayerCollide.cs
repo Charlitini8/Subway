@@ -25,8 +25,7 @@ public class PlayerCollide : MonoBehaviour
         {
             onCoinCollected?.Invoke(transform);
             other.gameObject.SetActive(false);
-        }
-        else if (other.CompareTag(JumpPowerUpTag))
+        } else if (other.CompareTag(JumpPowerUpTag))
         {
             onJumpPowerUpCollected?.Invoke(transform);
             other.gameObject.SetActive(false);

@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8294403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8294405}
+  - component: {fileID: 8294404}
+  m_Layer: 0
+  m_Name: InstantiateJumpPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8294404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024003b728fdae64c89fc827be35cab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 5404570566309138511, guid: d54ebb0ccbdf08046a1f6bc013eb5a24, type: 3}
+--- !u!4 &8294405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294403}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.33274, y: -115.4109, z: 2.18886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &52980523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,6 +667,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 572261c0e1a28424e8822a0fd61a1a34, type: 3}
   m_PrefabInstance: {fileID: 2010939757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &361199292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 361199293}
+  - component: {fileID: 361199294}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361199293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361199292}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -762.90607, y: 0, z: -22.05555}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361199294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361199292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65350c3b87344e74db8c63effa2d72f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpManager
+  minPlatformsNumber: 5
+  maxPlatformsNumber: 7
+  powerUpPools:
+  - {fileID: 8294404}
+  powerUpOffset: 0.5
 --- !u!1 &390815447
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,10 +749,10 @@ MonoBehaviour:
   onPointsChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 390815448}
-        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: StopCounting
-        m_Mode: 1
+      - m_Target: {fileID: 1519554235}
+        m_TargetAssemblyTypeName: PointsUI, Assembly-CSharp
+        m_MethodName: UpdatePoints
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2323,7 +2417,7 @@ GameObject:
   - component: {fileID: 1519554234}
   - component: {fileID: 1519554233}
   - component: {fileID: 1519554232}
-  - component: {fileID: 1519554231}
+  - component: {fileID: 1519554235}
   m_Layer: 5
   m_Name: PointsUI
   m_TagString: Untagged
@@ -2352,21 +2446,6 @@ RectTransform:
   m_AnchoredPosition: {x: -298.5, y: -96.6}
   m_SizeDelta: {x: 486.9, y: 118.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1519554231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519554229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 104496afb7d707f41a9e6deb4469e02a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinsUI
-  coinsText: {fileID: 1378676715}
-  animator: {fileID: 1519554232}
-  animationName: Wiggle
 --- !u!95 &1519554232
 Animator:
   serializedVersion: 7
@@ -2427,6 +2506,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519554229}
   m_CullTransparentMesh: 1
+--- !u!114 &1519554235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519554229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624860a2930aedf4298cfbbcc21df4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointsUI
+  text: {fileID: 1378676715}
 --- !u!1 &1678575010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2602,9 @@ MonoBehaviour:
   - {fileID: 2013617653}
   initialPlatforms: 30
   speed: 8
+  onPlatformPassed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1867353319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,3 +3075,5 @@ SceneRoots:
   - {fileID: 889921176}
   - {fileID: 390815449}
   - {fileID: 689013718}
+  - {fileID: 361199293}
+  - {fileID: 8294405}
