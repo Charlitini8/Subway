@@ -11,6 +11,7 @@ TagManager:
   - Coin
   - Undefined
   - JumpPowerUp
+  - Magnet
   layers:
   - Default
   - TransparentFX
