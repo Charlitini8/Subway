@@ -2946,7 +2946,7 @@ MonoBehaviour:
   - {fileID: 1767026436}
   securePlatformPrefabs:
   - {fileID: 2013617653}
-  initialPlatforms: 30
+  initialPlatforms: 25
   speed: 8
   onPlatformPassed:
     m_PersistentCalls:
