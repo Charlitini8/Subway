@@ -505,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 171702857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -116.42, z: -7.99288}
+  m_LocalPosition: {x: 0.57, y: -116.42, z: -24.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -728,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 275342062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -116.29002, z: -24.37}
+  m_LocalPosition: {x: -0.5, y: -116.29002, z: -50.5}
   m_LocalScale: {x: 4.4649, y: 5.193519, z: 0.3477734}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -839,6 +839,7 @@ MonoBehaviour:
   maxPlatformsNumber: 7
   powerUpPools:
   - {fileID: 8294404}
+  - {fileID: 644994630}
   - {fileID: 644994630}
   powerUpOffset: 10
 --- !u!1 &390815447
@@ -2089,7 +2090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1080092144}
-  - component: {fileID: 1080092143}
+  - component: {fileID: 1080092145}
   m_Layer: 0
   m_Name: InstantiatePlatformsStreet
   m_TagString: Untagged
@@ -2097,7 +2098,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1080092143
+--- !u!4 &1080092144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080092142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.38, y: -116.56361, z: -3.41158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080092145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2110,21 +2126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
   prefab: {fileID: 3752777459921747515, guid: b09ed3f8fd784b94f8e2ec36adf41b14, type: 3}
---- !u!4 &1080092144
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080092142}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.57325, y: -116.56361, z: -3.41158}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102577234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,7 +2838,7 @@ Transform:
   m_GameObject: {fileID: 1678575010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -116.36003, z: -19.27}
+  m_LocalPosition: {x: -0.5, y: -116.36003, z: -25.789997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2848,6 +2849,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4149726451612998657, guid: abdcf556d711be14988b522e802391e2, type: 3}
   m_PrefabInstance: {fileID: 212769224}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1767026435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767026437}
+  - component: {fileID: 1767026436}
+  m_Layer: 0
+  m_Name: InstantiatePlatforms2Piso
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1767026436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767026435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024003b728fdae64c89fc827be35cab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InstantiatePoolObjects
+  prefab: {fileID: 2987958156572246549, guid: f4c464cae795f7745ad136bc4b05734e, type: 3}
+--- !u!4 &1767026437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767026435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.26, y: -115.53, z: 19.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857515238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,10 +2942,12 @@ MonoBehaviour:
   platformPrefabs:
   - {fileID: 171702858}
   - {fileID: 1993888869}
+  - {fileID: 1080092145}
+  - {fileID: 1767026436}
   securePlatformPrefabs:
   - {fileID: 2013617653}
   initialPlatforms: 30
-  speed: 10
+  speed: 8
   onPlatformPassed:
     m_PersistentCalls:
       m_Calls:
@@ -3148,6 +3196,18 @@ MonoBehaviour:
           m_StringArgument: Music Game
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1867353320}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Music Game
+          m_BoolArgument: 0
+        m_CallState: 2
   onGameLose:
     m_PersistentCalls:
       m_Calls:
@@ -3187,6 +3247,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1867353320}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1981284728
 Transform:
   m_ObjectHideFlags: 0
@@ -3196,7 +3268,7 @@ Transform:
   m_GameObject: {fileID: 1981284726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4003, y: -117.99274, z: -7.99288}
+  m_LocalPosition: {x: -1.4003, y: -117.99274, z: 1179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3355,7 +3427,7 @@ Transform:
   m_GameObject: {fileID: 2013617652}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92048, y: -115.0631, z: 8.39321}
+  m_LocalPosition: {x: 0.13, y: -115.0631, z: 8.39321}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3376,6 +3448,7 @@ SceneRoots:
   - {fileID: 1993888870}
   - {fileID: 1080092144}
   - {fileID: 2013617654}
+  - {fileID: 1767026437}
   - {fileID: 1981284728}
   - {fileID: 214973432}
   - {fileID: 119657597}
