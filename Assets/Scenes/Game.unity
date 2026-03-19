@@ -2278,6 +2278,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 667746729}
   smoothSpeed: 0.25
+  minX: -1.22
+  maxX: 0.5
+  verticalThreshold: 1
+  verticalSmoothSpeed: 3
 --- !u!1001 &1205801084
 PrefabInstance:
   m_ObjectHideFlags: 0
