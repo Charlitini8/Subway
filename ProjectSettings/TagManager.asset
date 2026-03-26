@@ -12,6 +12,7 @@ TagManager:
   - Undefined
   - JumpPowerUp
   - Magnet
+  - Jetpack
   layers:
   - Default
   - TransparentFX

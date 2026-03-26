@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 1321606a84dd49442a0f10ee299c7cec
+guid: c0136edcb6dd6854eab0aa33bb292123
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: magnet
-    second: {fileID: 2100000, guid: be3225dd881ebf441be90fcb4ed3fa9b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
