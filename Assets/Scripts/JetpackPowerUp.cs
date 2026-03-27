@@ -34,7 +34,7 @@ public class JetpackPowerUp : MonoBehaviour
     private IEnumerator DeactivateJetPack()
     {
         yield return new WaitForSeconds(flyDuration);
-        DeactivateJetPack();
+        Deactivate();
     }
     public void Deactivate()
     {
