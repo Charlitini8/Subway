@@ -12,6 +12,6 @@ public class CoinsUI : MonoBehaviour
     public void UpdateCoinsText(string coins)
     {
         animator.Play(animationName, 0, 0f);
-        coinsText.text =coins;
+        coinsText.text = coins;
     }
 }
