@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade
       objectReference: {fileID: 0}
+    - target: {fileID: 234093105939773175, guid: 58dee3692c91f4b418984f798acd4010, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3988375569471550324, guid: 58dee3692c91f4b418984f798acd4010, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -946,11 +950,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1616333840}
-  m_Father: {fileID: 1965155212}
+  m_Father: {fileID: 677363166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5, y: -267.56}
+  m_AnchoredPosition: {x: 0, y: -268.06}
   m_SizeDelta: {x: 1012, y: 505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217525966
@@ -1356,7 +1360,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pointsTexts: []
+  pointsTexts:
+  - {fileID: 1616333841}
 --- !u!4 &390815449
 Transform:
   m_ObjectHideFlags: 0
@@ -2474,6 +2479,7 @@ RectTransform:
   - {fileID: 698710025}
   - {fileID: 810181761}
   - {fileID: 1180999226}
+  - {fileID: 217525965}
   m_Father: {fileID: 1965155212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5697,7 +5703,6 @@ RectTransform:
   - {fileID: 1712621843}
   - {fileID: 1908938262}
   - {fileID: 442718160}
-  - {fileID: 217525965}
   - {fileID: 677363166}
   - {fileID: 119073620}
   m_Father: {fileID: 0}
@@ -5889,6 +5894,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1867353320}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 390815448}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: CalculateHighScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
