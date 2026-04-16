@@ -12,6 +12,8 @@ public class PlayerCollide : MonoBehaviour
    [SerializeField]
    private string jetpackTag = "Jetpack";
    [SerializeField]
+   private string bootsTag = "Boots";
+   [SerializeField]
    private UnityEvent<Transform> onJetpackCollected;
    [SerializeField]
    private UnityEvent<Transform> onMagnetCollected;
@@ -21,6 +23,8 @@ public class PlayerCollide : MonoBehaviour
    private UnityEvent<Transform> onJumpPowerUpCollected;
    [SerializeField]
    private UnityEvent<Transform> onCoinCollected;
+   [SerializeField]
+   private UnityEvent<Transform> onBootsCollected;
    private void OnTriggerEnter(Collider other)
    {
         if (other.CompareTag(obstacleTag))
@@ -44,6 +48,11 @@ public class PlayerCollide : MonoBehaviour
         else if (other.CompareTag(jetpackTag))
         {
             onJetpackCollected?.Invoke(transform);
+            other.gameObject.SetActive(false);
+        }
+        else if (other.CompareTag(jetpackTag))
+        {
+            onBootsCollected?.Invoke(transform);
             other.gameObject.SetActive(false);
         }
    }
