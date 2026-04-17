@@ -196,10 +196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnet
       objectReference: {fileID: 0}
-    - target: {fileID: 2316868279422796073, guid: abdcf556d711be14988b522e802391e2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4149726451612998657, guid: abdcf556d711be14988b522e802391e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.58

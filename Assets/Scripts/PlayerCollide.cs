@@ -50,7 +50,7 @@ public class PlayerCollide : MonoBehaviour
             onJetpackCollected?.Invoke(transform);
             other.gameObject.SetActive(false);
         }
-        else if (other.CompareTag(jetpackTag))
+        else if (other.CompareTag(bootsTag))
         {
             onBootsCollected?.Invoke(transform);
             other.gameObject.SetActive(false);
