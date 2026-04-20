@@ -819,13 +819,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1409159373}
     m_Modifications:
+    - target: {fileID: 575494395816435344, guid: abdcf556d711be14988b522e802391e2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 575494395816435344, guid: abdcf556d711be14988b522e802391e2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2316868279422796073, guid: abdcf556d711be14988b522e802391e2, type: 3}
       propertyPath: m_Name
       value: Magnet
-      objectReference: {fileID: 0}
-    - target: {fileID: 2316868279422796073, guid: abdcf556d711be14988b522e802391e2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4149726451612998657, guid: abdcf556d711be14988b522e802391e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -867,7 +871,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -136.95
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 953189542703706660, guid: abdcf556d711be14988b522e802391e2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -997,7 +1002,7 @@ GameObject:
   - component: {fileID: 248425169}
   m_Layer: 0
   m_Name: MagnetCollider
-  m_TagString: Magnet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1061,8 +1066,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.74, y: 3.03, z: 0.75}
-  m_Center: {x: -0.15, y: 0, z: -0.55}
+  m_Size: {x: 4.74, y: 3.03, z: 3.09}
+  m_Center: {x: -0.15, y: 1.36, z: -1.16}
 --- !u!4 &248425172
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,8 +1227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122d4276156869f42a8806aa43d048ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagnetPowerUp
-  magnet: {fileID: 2316868279422796073, guid: abdcf556d711be14988b522e802391e2, type: 3}
-  duration: 5
+  magnet: {fileID: 739958169}
+  duration: 8
   magnetCollider: {fileID: 248425171}
 --- !u!4 &291065842
 Transform:
@@ -1659,7 +1664,7 @@ Transform:
   m_GameObject: {fileID: 522324915}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2244,7 +2249,7 @@ CapsuleCollider:
   m_Radius: 0.52
   m_Height: 1.93
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 0.92, z: 0}
 --- !u!114 &667746733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,7 +2266,6 @@ MonoBehaviour:
   coinTag: Coin
   JumpPowerUpTag: JumpPowerUp
   jetpackTag: Jetpack
-  bootsTag: Boots
   onJetpackCollected:
     m_PersistentCalls:
       m_Calls:
@@ -2421,9 +2425,6 @@ MonoBehaviour:
           m_StringArgument: coin
           m_BoolArgument: 0
         m_CallState: 2
-  onBootsCollected:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!135 &667746734
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2444,7 +2445,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0.51, z: 0.01}
+  m_Center: {x: 0, y: 0.53, z: -1.23}
 --- !u!1 &677363165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2652,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698710024}
   m_CullTransparentMesh: 1
+--- !u!1 &739958169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2316868279422796073, guid: abdcf556d711be14988b522e802391e2, type: 3}
+  m_PrefabInstance: {fileID: 212769224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &742609810
 GameObject:
   m_ObjectHideFlags: 0
